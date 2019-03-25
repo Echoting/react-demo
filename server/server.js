@@ -7,9 +7,6 @@ const app = new (require('express'))()
 const port = 3003
 const compiler = webpack(config)
 
-process.env.BABEL_ENV = 'development';
-process.env.NODE_ENV = 'development';
-
 app.use(webpackDevMiddleware(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath,

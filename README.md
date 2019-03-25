@@ -1,6 +1,4 @@
-参考资料：
-- https://juejin.im/post/5a715fadf265da3e5661d667#heading-1
-- https://www.jianshu.com/p/dcdb3884d73c
+# 从零开始搭建 react+react-router+mobx+less环境
 
 npm install  
 npm start  

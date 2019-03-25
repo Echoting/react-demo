@@ -9,6 +9,11 @@ const APP_PATH = path.resolve(CONFIG_PATH, '../src')
 const APP_FILE = path.resolve(APP_PATH, 'index.js')
 // 打包目录文件夹路径
 const BUILD_PATH = path.resolve(CONFIG_PATH, '../dist')
+
+
+process.env.BABEL_ENV = 'development';
+process.env.NODE_ENV = 'development';
+
 module.exports = {
     mode: 'development',
     // 入口
