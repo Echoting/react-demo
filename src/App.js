@@ -1,11 +1,10 @@
 import React from 'react'
-// import { Provider } from 'react-redux'
-// import { history } from '@/store'
-// import { Redirect } from 'react-router-dom'
-// persister 缓存恢复前调用的方法
-const onBeforeLift = () => {
-    // console.log('before action')
-}
+import Routes from 'routes/index';
+
+import {Provider} from 'mobx-react';
+import stores from './stores/index';
+import 'App.less';
+
 class App extends React.Component {
     constructor(props) {
         super(props)
@@ -13,7 +12,9 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
-
+                <Provider {...stores}>
+                    <Routes />
+                </Provider>
             </div>
         );
     }
