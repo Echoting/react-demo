@@ -1,8 +1,10 @@
-const webpack = require('webpack')
+const webpack = require('webpack');
+const path = require('path');
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
 const config = require('../config/webpack.config.dev.js')
-const app = new (require('express'))()
+const express = require('express')
+const app = new express()
 // 本地预览代码的端口
 const port = 3003
 const compiler = webpack(config)
@@ -15,9 +17,18 @@ app.use(webpackDevMiddleware(compiler, {
     }
 }))
 app.use(webpackHotMiddleware(compiler))
-app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/index.html')
-})
+
+
+app.use(express.static(path.resolve(__dirname, '../dist/assets')))
+
+// app.get('*', function(req, res) {
+//     res.sendFile(__dirname + '/index.html')
+//     // res.sendFile(path.resolve(__dirname, '../dist/assets/index.html'))
+// })
+
+// console.log('..........................', __dirname)
+//
+
 app.listen(port, function(error) {
     if (error) {
         /*eslint no-console: 0*/
