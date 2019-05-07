@@ -5,6 +5,11 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 const config = require('../config/webpack.config.dev.js')
 const express = require('express')
 const app = new express()
+
+const proxyMiddleware = require('http-proxy-middleware');
+const proxyTable = require('./proxyTable');
+
+
 // 本地预览代码的端口
 const port = 3003
 const compiler = webpack(config)
@@ -28,6 +33,15 @@ app.use(express.static(path.resolve(__dirname, '../dist/assets')))
 
 // console.log('..........................', __dirname)
 //
+
+Object.keys(proxyTable).forEach(function (context) {
+    var options = proxyTable[context]
+    if (typeof options === 'string') {
+        options = { target: options }
+    }
+    // 创建并使用代理
+    app.use(proxyMiddleware(options.filter || context, options))
+})
 
 app.listen(port, function(error) {
     if (error) {

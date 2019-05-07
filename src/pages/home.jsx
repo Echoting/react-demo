@@ -4,6 +4,13 @@ import {inject} from 'mobx-react';
 
 @inject('homeStore')
 class Home extends React.Component {
+
+    componentWillMount() {
+        fetch('/api').then(function(response){
+            console.log(666)
+        });
+    }
+
     render() {
         return (
             <div>
