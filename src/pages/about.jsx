@@ -6,14 +6,14 @@ import { observable } from 'mobx';
 
 // import TextareaNoScroll from 'textarea-no-scroll'
 
-// @inject('aboutStore')
+@inject('aboutStore')
 class About extends React.Component {
 
-    @observable test = 1235555;
+    @observable test = 12355;
     render() {
         return (
             <div>
-                {/*<p>{this.props.aboutStore.title}</p>*/}
+                <p>{this.props.aboutStore.title}</p>
                 <p> {this.test}</p>
                 {/*<TextareaNoScroll />*/}
                 <Link to="/">go to Home</Link>

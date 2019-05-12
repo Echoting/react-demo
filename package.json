@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server/server.js",
+    "dev": "npm run dll:dev && node server/server.js",
     "start": "npm run dev",
     "clean": "rimraf dist/*",
     "build": "npm run dll:prod && webpack --config config/webpack.config.prod.js",

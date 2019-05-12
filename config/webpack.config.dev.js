@@ -2,10 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 
 const ROOT_PATH = path.resolve(__dirname);
+const DLL_PATH = path.resolve(ROOT_PATH, '../dist/dll-dev');
 
 const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.config.base');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const AddAssetHtmlPlugin = require("add-asset-html-webpack-plugin");
 
 process.env.BABEL_ENV = 'development';
 process.env.NODE_ENV = 'development';
@@ -39,23 +41,20 @@ module.exports = merge(baseWebpackConfig, {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
 
-        // new HtmlWebpackPlugin({
-        //     template: path.resolve(ROOT_PATH, '../server/index.html'),
-        //     filename: '../../dist/index.html',
-        // })
+        new webpack.DllReferencePlugin({
+            // 跟dll.config里面DllPlugin的context一致
+            context: process.cwd(),
 
-        // new AddAssetHtmlPlugin({
-        //     filepath: require.resolve('../dist/dll/vendor.bundle.dll.js'), // 这个路径是你的dll文件路径
-        //     // includeSourcemap: false  // 这里是因为我开启了sourcemap。 不这么写会报错。
-        // }),
-
-        // dllPlugin关联配置
-        // new webpack.DllReferencePlugin({
-        //     // 跟dll.config里面DllPlugin的context一致
-        //     context: process.cwd(),
-        //
-        //     // dll过程生成的manifest文件
-        //     manifest: require(path.join(DLL_PATH, "vendor-manifest.json"))
-        // })
+            // dll过程生成的manifest文件
+            manifest: require(path.join(DLL_PATH, "vendor-manifest.json"))
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(ROOT_PATH, '../server/index.html'),
+            filename: 'index.html',
+        }),
+        new AddAssetHtmlPlugin({
+            filepath: require.resolve('../dist/dll-dev/vendor.bundle.dll.js'), // 这个路径是你的dll文件路径
+            // includeSourcemap: false  // 这里是因为我开启了sourcemap。 不这么写会报错。
+        })
     ]
 });
