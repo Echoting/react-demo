@@ -12,9 +12,9 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <Provider {...stores}>
+                {/*<Provider {...stores}>*/}
                     <Routes />
-                </Provider>
+                {/*</Provider>*/}
             </div>
         );
     }
