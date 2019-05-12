@@ -24,7 +24,7 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler))
 
 
-app.use(express.static(path.resolve(__dirname, '../dist/assets')))
+app.use(express.static(path.resolve(__dirname, '../')))
 
 // app.get('*', function(req, res) {
 //     res.sendFile(__dirname + '/index.html')

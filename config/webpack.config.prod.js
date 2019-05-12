@@ -27,7 +27,7 @@ module.exports = merge(baseWebpackConfig, {
         chunkFilename: "[name].[hash].js",
         //模板、样式、脚本、图片等资源对应的server上的路径
         // “publicPath”项则被许多Webpack的插件用于在生产模式下更新内嵌到css、html文件里的url值。
-        publicPath: "",
+        publicPath: "dist/assets/",
     },
     plugins: [
         new webpack.DefinePlugin({

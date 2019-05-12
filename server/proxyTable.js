@@ -1,12 +1,12 @@
 module.exports = {
     '/api': {
         // 目标服务器 host
-        target: 'https://www.baidu.com/',
+        target: 'http://cake.eux.internal.baidu.com/demo-v2-picidae/comps/suggest#/',
         // 默认false，是否需要改变原始主机头为目标URL
         changeOrigin: true,
         pathRewrite: {
             // 重写请求，比如我们源访问的包含/api，那么请求会将/api替换为/yh/ihr/api
-            '/api': '/yh/ihr/api',
+            // '/api': '/yh/ihr/api',
             // 重写请求，比如我们源访问的是api/old-path，那么请求会被解析为/api/new-path
             '^/api/old-path' : '/api/new-path',
             // 同上

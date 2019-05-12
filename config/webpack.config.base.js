@@ -72,7 +72,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(ROOT_PATH, '../server/index.html'),
-            filename: 'index.html',
+            filename: '../../index.html',
         }),
         new AddAssetHtmlPlugin({
             filepath: require.resolve('../dist/dll/vendor.bundle.dll.js'), // 这个路径是你的dll文件路径

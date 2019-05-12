@@ -73,3 +73,5 @@ new AddAssetHtmlPlugin({
 ![](http://pik.internal.baidu.com/2019/05/07/e138112c6f87f583044ec9ace5a23cdc.png)
 原因是没能将vendor.bundle.dll.js正确的引入到页面中（路径错误）
 
+区分环境
+
