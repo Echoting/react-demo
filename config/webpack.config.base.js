@@ -63,21 +63,21 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.DllReferencePlugin({
-            // 跟dll.config里面DllPlugin的context一致
-            context: process.cwd(),
-
-            // dll过程生成的manifest文件
-            manifest: require(path.join(DLL_PATH, "vendor-manifest.json"))
-        }),
+        // new webpack.DllReferencePlugin({
+        //     // 跟dll.config里面DllPlugin的context一致
+        //     context: process.cwd(),
+        //
+        //     // dll过程生成的manifest文件
+        //     manifest: require(path.join(DLL_PATH, "vendor-manifest.json"))
+        // }),
         new HtmlWebpackPlugin({
             template: path.resolve(ROOT_PATH, '../server/index.html'),
             filename: '../../index.html',
         }),
-        new AddAssetHtmlPlugin({
-            filepath: require.resolve('../dist/dll/vendor.bundle.dll.js'), // 这个路径是你的dll文件路径
-            // includeSourcemap: false  // 这里是因为我开启了sourcemap。 不这么写会报错。
-        })
+        // new AddAssetHtmlPlugin({
+        //     filepath: require.resolve('../dist/dll/vendor.bundle.dll.js'), // 这个路径是你的dll文件路径
+        //     // includeSourcemap: false  // 这里是因为我开启了sourcemap。 不这么写会报错。
+        // })
     ],
     resolve: {
         //后缀名自动补全

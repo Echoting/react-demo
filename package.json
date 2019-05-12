@@ -7,7 +7,7 @@
     "dev": "node server/server.js",
     "start": "npm run dev",
     "clean": "rimraf dist/*",
-    "build": "npm run dll:prod && webpack --config config/webpack.config.prod.js",
+    "build": "rimraf dist && webpack --config config/webpack.config.prod.js",
     "dll:dev": "rimraf dist && webpack --config config/webpack.dll.config.dev.js",
     "dll:prod": "rimraf dist && webpack --config config/webpack.dll.config.prod.js"
   },

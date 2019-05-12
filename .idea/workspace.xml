@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6227465-08d0-4cb3-9543-6f496f50baa8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/config/webpack.dll.config.dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.dll.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.dll.config.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/main.751875c7643fc3d1a961.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/vendor.bundle.dll.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/vendor.bundle.dll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/dll/vendor-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/dll/vendor-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/dll/vendor.bundle.dll.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/dll/vendor.bundle.dll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.config.base.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.dll.config.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.dll.config.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/main.c7f24f3ec808cc9352c8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/vendor.bundle.dll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/dll/vendor-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/dll/vendor.bundle.dll.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,18 +40,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.config.base.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="webpack.config.base.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/webpack.config.base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="74" column="41" lean-forward="true" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+            <state relative-caret-position="375">
+              <caret line="79" column="13" lean-forward="true" selection-start-line="76" selection-start-column="11" selection-end-line="79" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
@@ -68,17 +70,17 @@
       <file leaf-file-name="webpack.dll.config.prod.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/webpack.dll.config.prod.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="25" lean-forward="true" selection-end-line="38" selection-end-column="1" />
+            <state relative-caret-position="570">
+              <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -149,13 +151,14 @@
         <option value="$PROJECT_DIR$/docs/proxy.md" />
         <option value="$PROJECT_DIR$/docs/dllPlugin.md" />
         <option value="$PROJECT_DIR$/server/proxyTable.js" />
-        <option value="$PROJECT_DIR$/config/webpack.config.base.js" />
         <option value="$PROJECT_DIR$/config/webpack.config.prod.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/webpack.dll.config.js" />
         <option value="$PROJECT_DIR$/config/webpack.dll.config.dev.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/config/webpack.dll.config.prod.js" />
+        <option value="$PROJECT_DIR$/config/webpack.config.base.js" />
       </list>
     </option>
   </component>
@@ -200,11 +203,6 @@
               <item name="react-example" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-example" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-example" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-example" type="b2602c69:ProjectViewProjectNode" />
@@ -273,12 +271,12 @@
       <workItem from="1557285000907" duration="144000" />
       <workItem from="1557472861291" duration="1176000" />
       <workItem from="1557479881748" duration="987000" />
-      <workItem from="1557655861346" duration="2419000" />
+      <workItem from="1557655861346" duration="2993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36160000" />
+    <option name="totallyTimeSpent" value="36734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -586,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="74" column="41" lean-forward="true" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack.config.prod.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -614,13 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack.dll.config.prod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" lean-forward="true" selection-end-line="38" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack.dll.config.dev.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -629,12 +613,30 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.dll.config.prod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.config.base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="79" column="13" lean-forward="true" selection-start-line="76" selection-start-column="11" selection-end-line="79" selection-end-column="13" />
         </state>
       </provider>
     </entry>

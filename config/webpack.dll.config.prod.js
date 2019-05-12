@@ -25,15 +25,15 @@ module.exports = {
         library: "[name]"
     },
     plugins: [
-        new webpack.DllPlugin({
-            // manifest缓存文件的请求上下文（默认为webpack执行环境上下文）
-            context: process.cwd(),
-
-            // manifest.json文件的输出位置
-            path: path.join(rootPath, "dist/dll", "[name]-manifest.json"),
-
-            // 定义打包的公共vendor文件对外暴露的函数名
-            name: "[name]"
-        })
+        // new webpack.DllPlugin({
+        //     // manifest缓存文件的请求上下文（默认为webpack执行环境上下文）
+        //     context: process.cwd(),
+        //
+        //     // manifest.json文件的输出位置
+        //     path: path.join(rootPath, "dist/dll", "[name]-manifest.json"),
+        //
+        //     // 定义打包的公共vendor文件对外暴露的函数名
+        //     name: "[name]"
+        // })
     ]
 }
