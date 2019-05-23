@@ -5,7 +5,7 @@ import Home from '../pages/home';
 import About from '../pages/about';
 
 const Routes = () => (
-    <Router>
+    <Router basename={location.pathname}>
         <div>
             <Route exact path="/" component={Home}/>
             <Route path="/about" component={About}/>

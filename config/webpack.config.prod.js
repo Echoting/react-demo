@@ -19,6 +19,7 @@ module.exports = merge(baseWebpackConfig, {
     entry: [
         path.resolve(ROOT_PATH, '../src/index.js')
     ],
+    devtool: 'source-map',
     output: {
         // 输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
         // “path”仅仅告诉Webpack结果存储在哪里
