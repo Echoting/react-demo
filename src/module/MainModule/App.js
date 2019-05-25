@@ -1,5 +1,5 @@
 import React from 'react'
-import Routes from './routers';
+import Routes from './routes';
 
 // import {Provider} from 'mobx-react';
 import './App.less';
