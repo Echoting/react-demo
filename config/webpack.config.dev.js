@@ -19,14 +19,15 @@ module.exports = merge(baseWebpackConfig, {
         'react-hot-loader/patch',
         // 这里reload=true的意思是，如果碰到不能hot reload的情况，就整页刷新。
         'webpack-hot-middleware/client?reload=true',
-        path.resolve(ROOT_PATH, '../src/index.js')
+        // @todo 待修改
+        path.resolve(ROOT_PATH, '../src/module/MainModule/index.js')
     ],
     // 输出
     output: {
         // 告诉Webpack结果存储在哪里
         path: path.resolve(ROOT_PATH, '../dist/assets'),
         // 打包后的文件名
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         //模板、样式、脚本、图片等资源对应的server上的路径
         publicPath: "",
     },

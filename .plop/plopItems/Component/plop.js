@@ -47,10 +47,10 @@ module.exports = function(plop, data, utils) {
      *      compReactClass
      *      compStateClass
      */
-    plop.setGenerator('component-vm', {
+    plop.setGenerator('component', {
         prompts,
         actions: function(inputs) {
-            const compPath = '{{currentPath}}/{{compClass}}VM';
+            const compPath = '{{currentPath}}/{{compClass}}Comp';
 
             let actions = [
                 {

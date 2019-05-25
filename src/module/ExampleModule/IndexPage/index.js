@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {inject} from 'mobx-react';
+import {observable} from 'mobx';
 
-@inject('homeStore')
+
+// @inject('homeStore')
 class Home extends React.Component {
+
+    @observable title = 'this is home page';
 
     componentWillMount() {
         fetch('/api').then(function(response){
@@ -14,7 +18,7 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <p>{this.props.homeStore.title}</p>
+                <p>{this.title}</p>
                 <Link to="/about">go to About</Link>
             </div>
         );

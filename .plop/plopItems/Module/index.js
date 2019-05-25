@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
+import {AppContainer} from 'react-hot-loader'
 // 应用文件
 import App from './App'
 
 
 ReactDOM.render(
-<AppContainer>
-<App/>
-</AppContainer>
+    <AppContainer>
+        <App/>
+    </AppContainer>
     , document.getElementById('app'))
 
 
