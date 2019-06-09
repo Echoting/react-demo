@@ -9,6 +9,7 @@ const app = new express()
 const proxyMiddleware = require('http-proxy-middleware');
 const proxyTable = require('./proxyTable');
 
+var router = express.Router();
 
 // 本地预览代码的端口
 const port = 3003
@@ -34,14 +35,19 @@ app.use(express.static(path.resolve(__dirname, '../dist/assets')))
 // console.log('..........................', __dirname)
 //
 
-Object.keys(proxyTable).forEach(function (context) {
-    var options = proxyTable[context]
-    if (typeof options === 'string') {
-        options = { target: options }
-    }
-    // 创建并使用代理
-    app.use(proxyMiddleware(options.filter || context, options))
-})
+// 请求转发
+// Object.keys(proxyTable).forEach(function (context) {
+//     var options = proxyTable[context]
+//     if (typeof options === 'string') {
+//         options = { target: options }
+//     }
+//     // 创建并使用代理
+//     app.use(proxyMiddleware(options.filter || context, options))
+// });
+
+router.use('/', require('../mock/test-mock'));
+
+app.use("/", router)
 
 app.listen(port, function(error) {
     if (error) {
